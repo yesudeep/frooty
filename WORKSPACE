@@ -25,13 +25,6 @@ load("@com_github_nelhage_rules_boost//:boost/boost.bzl", "boost_deps")
 
 boost_deps()
 
-# http_archive(
-#     name = "com_google_fruit",
-#     sha256 = "1d6e8f667d3210b25939f1fd2141b11b737c129430c8554156a77ab5d8c390ea",
-#     strip_prefix = "fruit-94cefefb42f3685c1d64664e6aa9cbaf834b25ee/extras/bazel_root",
-#     urls = ["https://github.com/google/fruit/archive/94cefefb42f3685c1d64664e6aa9cbaf834b25ee.tar.gz"],
-# )
-
 # git_repository(
 #     name = "com_google_fruit",
 #     branch = "master",
@@ -41,6 +34,6 @@ boost_deps()
 
 http_archive(
     name = "com_google_fruit",
-    strip_prefix = "fruit-fix-bazel-build/extras/bazel_root",
-    urls = ["https://github.com/yesudeep/fruit/archive/fix-bazel-build.tar.gz"],
+    strip_prefix = "fruit-master/extras/bazel_root",
+    urls = ["https://github.com/google/fruit/archive/master.tar.gz"],
 )
