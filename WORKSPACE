@@ -1,5 +1,4 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 http_archive(
     name = "rules_cc",
@@ -33,9 +32,15 @@ boost_deps()
 #     urls = ["https://github.com/google/fruit/archive/94cefefb42f3685c1d64664e6aa9cbaf834b25ee.tar.gz"],
 # )
 
-git_repository(
+# git_repository(
+#     name = "com_google_fruit",
+#     branch = "master",
+#     remote = "https://github.com/google/fruit",
+#     strip_prefix = "extras/bazel_root",
+# )
+
+http_archive(
     name = "com_google_fruit",
-    branch = "master",
-    remote = "https://github.com/google/fruit",
-    strip_prefix = "extras/bazel_root",
+    strip_prefix = "fruit-fix-bazel-build/extras/bazel_root",
+    urls = ["https://github.com/yesudeep/fruit/archive/fix-bazel-build.tar.gz"],
 )

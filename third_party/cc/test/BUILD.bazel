@@ -6,7 +6,7 @@ cc_test(
     srcs = ["com_google_fruit_test.cc"],
     visibility = ["//visibility:public"],
     deps = [
-        "@com_google_fruit//:fruit",
+        "@com_google_fruit//third_party/fruit",
         "@com_google_googletest//:gtest_main",
     ],
 )
