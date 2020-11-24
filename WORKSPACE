@@ -1,18 +1,16 @@
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-# http_archive(
-#     name = "rules_cc",
-#     sha256 = "b87996d308549fc3933f57a786004ef65b44b83fd63f1b0303a4bbc3fd26bbaf",
-#     strip_prefix = "rules_cc-1477dbab59b401daa94acedbeaefe79bf9112167",
-#     urls = ["https://github.com/bazelbuild/rules_cc/archive/1477dbab59b401daa94acedbeaefe79bf9112167.tar.gz"],
-# )
+http_archive(
+    name = "rules_cc",
+    strip_prefix = "rules_cc-master",
+    urls = ["https://github.com/bazelbuild/rules_cc/archive/master.tar.gz"],
+)
 
 http_archive(
     name = "com_google_googletest",
-    sha256 = "66f4362996da6750d1126fc4cff8ebae65ccc07054f5050453f43dd704f5bfcb",
-    strip_prefix = "googletest-68ca04c261ded1b936ef5c121618247f7010d445",
-    urls = ["https://github.com/google/googletest/archive/68ca04c261ded1b936ef5c121618247f7010d445.tar.gz"],
+    strip_prefix = "googletest-master",
+    urls = ["https://github.com/google/googletest/archive/master.tar.gz"],
 )
 
 git_repository(
@@ -30,4 +28,10 @@ git_repository(
     branch = "master",
     remote = "https://github.com/google/fruit",
     strip_prefix = "extras/bazel_root",
+)
+
+http_archive(
+    name = "com_google_absl",
+    strip_prefix = "abseil-cpp-master",
+    urls = ["https://github.com/abseil/abseil-cpp/archive/master.tar.gz"],
 )
