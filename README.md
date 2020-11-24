@@ -1,1 +1,1 @@
-To reproduce issues found in github.com/google/fruit.
+To reproduce issues.
